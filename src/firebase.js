@@ -1,8 +1,8 @@
 // src/firebase.js
 
 import { initializeApp } from "firebase/app";
-import { getAuth, GoogleAuthProvider, signInWithPopup, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, signInAnonymously, signInWithCustomToken } from "firebase/auth";
-import { getFirestore, collection, doc, addDoc, getDoc, setDoc, updateDoc, deleteDoc, onSnapshot, query, orderBy, runTransaction } from "firebase/firestore";
+import { getAuth, GoogleAuthProvider, signInWithPopup, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "firebase/auth";
+import { getFirestore, collection, doc, addDoc, getDoc, setDoc, updateDoc, onSnapshot, query, orderBy, runTransaction, where } from "firebase/firestore";
 
 // 1. Get the configuration from Netlify's Environment Variables
 const firebaseConfig = {
@@ -37,8 +37,6 @@ export const firebase = {
   signInWithEmailAndPassword,
   onAuthStateChanged,
   signOut,
-  signInAnonymously,
-  signInWithCustomToken,
   // Firestore methods
   collection,
   doc,
@@ -46,9 +44,9 @@ export const firebase = {
   getDoc,
   setDoc,
   updateDoc,
-  deleteDoc,
   onSnapshot,
   query,
   orderBy,
-  runTransaction
+  runTransaction,
+  where
 };
