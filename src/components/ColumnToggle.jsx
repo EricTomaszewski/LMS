@@ -1,4 +1,4 @@
-    import React, { useState, useEffect, useRef } from 'react';
+    import { useState, useEffect, useRef } from 'react';
 
     const ColumnToggle = ({ columns, setColumns }) => {
         const [isOpen, setIsOpen] = useState(false);

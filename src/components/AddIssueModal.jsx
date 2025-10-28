@@ -1,4 +1,4 @@
-    import React, { useState } from 'react';
+    import { useState } from 'react';
     import { firebase, currentAppId } from '../firebase'; // Import initialized firebase and app ID
 
     const AddIssueModal = ({ onClose, onSave, db, user, defaultValues }) => {

@@ -1,4 +1,4 @@
-    import React, { useState, useEffect } from 'react';
+    import { useState, useEffect } from 'react';
     import { firebase, currentAppId } from '../firebase'; // Import initialized firebase and app ID
     import CopyLinkButton from './CopyLinkButton'; // Import the CopyLinkButton component
 

@@ -1,4 +1,4 @@
-    import React, { useMemo } from 'react';
+    import { useMemo } from 'react';
 
     const FilterPanel = ({ issues, filters, setFilters, onClose }) => {
         // Calculate available filter options based on the *current* list of issues

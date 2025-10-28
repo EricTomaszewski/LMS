@@ -1,4 +1,3 @@
-    import React from 'react';
     import { getStatusClass, getPriorityClass, getDueDateInfo, getAssignedToClass } from '../utils'; // Import helper functions
     import CopyLinkButton from './CopyLinkButton'; // Import the CopyLinkButton component
 
