@@ -1,4 +1,4 @@
-    import React, { useState } from 'react';
+    import { useState } from 'react';
     import { firebase, currentAppId } from '../firebase'; // Import initialized firebase and app ID
 
     // Internal component for managing Assigned To list (includes email)

@@ -1,4 +1,4 @@
-    import React, { useState } from 'react';
+    import { useState } from 'react';
 
     const CopyLinkButton = ({ issueId }) => {
         const [copySuccess, setCopySuccess] = useState('');

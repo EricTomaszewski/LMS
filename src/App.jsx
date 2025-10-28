@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
+import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { firebase, currentAppId } from './firebase'; // Import initialized Firebase
 import LoginScreen from './components/LoginScreen';
 import AddIssueModal from './components/AddIssueModal';
@@ -79,6 +79,7 @@ export default function App() {
             setAuthReady(true); // Mark auth ready once listener fires
         });
         return () => unsubscribe(); // Cleanup listener on unmount
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [firebase]); // Depend on firebase object
     
     // Load user-specific column settings or set defaults
@@ -181,6 +182,7 @@ export default function App() {
              setSelectedIssue(null);
              setEditingIssue(null);
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [firebase, user, authReady]); // Added firebase to dependency array
 
     // Filtered and Sorted Issues Memoization
@@ -283,7 +285,7 @@ export default function App() {
         window.removeEventListener('mouseup', handleMouseUp);
     }, [handleMouseMove]);
 
-    const handleMouseDown = useCallback((e) => {
+    const handleMouseDown = useCallback(() => {
         isResizing.current = true;
         window.addEventListener('mousemove', handleMouseMove);
         window.addEventListener('mouseup', handleMouseUp);
